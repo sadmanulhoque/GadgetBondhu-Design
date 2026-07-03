@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - TechGadget</title>
+    
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Cart CSS Files -->
+    <link rel="stylesheet" href="css/cart-details/layout.css">
+    <link rel="stylesheet" href="css/cart-details/breadcrumb.css">
+    <link rel="stylesheet" href="css/cart-details/table.css">
+    <link rel="stylesheet" href="css/cart-details/summary.css">
+    <link rel="stylesheet" href="css/cart-details/action.css">
+</head>
+<body>
+
+<section id="wsus__cart_view">
+    <div class="container">
+        
+        <!-- Breadcrumb -->
+        <div class="cart-breadcrumb">
+            <a href="/">Home</a> &gt; 
+            <a href="/cart">Cart</a>
+        </div>
+
+        <div class="row">
+            <!-- Cart Items -->
+            <div class="col-xl-9">
+                <div class="wsus__cart_list">
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr class="d-flex">
+                                    <th class="wsus__pro_img">Product Image</th>
+                                    <th class="wsus__pro_name">Product Name</th>
+                                    <th class="wsus__pro_status">Price</th>
+                                    <th class="wsus__pro_status">Total Price</th>
+                                    <th class="wsus__pro_select">Quantity</th>
+                                    <th class="wsus__pro_icon">
+                                        <button class="clear-cart-btn">Clear Cart</button>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Item 1 -->
+                                <tr class="d-flex">
+                                    <td class="wsus__pro_img">
+                                        <img src="https://picsum.photos/id/1015/300/300" alt="product">
+                                    </td>
+                                    <td class="wsus__pro_name">
+                                        <p><a href="#">Premium Cotton Frock (B-0E48)</a></p>
+                                        <span>Size: 16 (+৳ 0)</span>
+                                    </td>
+                                    <td class="wsus__pro_status">
+                                        <p>৳ 300</p>
+                                    </td>
+                                    <td class="wsus__pro_status">
+                                        <p>৳ 300</p>
+                                    </td>
+                                    <td class="wsus__pro_select">
+                                        <div class="d-flex align-items-center justify-content-center gap-2">
+                                            <button class="btn btn-outline-danger qty-btn">-</button>
+                                            <input type="number" value="1" class="qty-input" readonly>
+                                            <button class="btn btn-outline-success qty-btn">+</button>
+                                        </div>
+                                    </td>
+                                    <td class="wsus__pro_icon">
+                                        <a href="#"><i class="fas fa-times"></i></a>
+                                    </td>
+                                </tr>
+
+                                <!-- Item 2 -->
+                                <tr class="d-flex">
+                                    <td class="wsus__pro_img">
+                                        <img src="https://picsum.photos/id/201/300/300" alt="product">
+                                    </td>
+                                    <td class="wsus__pro_name">
+                                        <p><a href="#">Premium Cotton Frock (B-0B56) Long Product Name Example</a></p>
+                                        <span>Size: 16 (+৳ 0)</span>
+                                    </td>
+                                    <td class="wsus__pro_status">
+                                        <p>৳ 300</p>
+                                    </td>
+                                    <td class="wsus__pro_status">
+                                        <p>৳ 300</p>
+                                    </td>
+                                    <td class="wsus__pro_select">
+                                        <div class="d-flex align-items-center justify-content-center gap-2">
+                                            <button class="btn btn-outline-danger qty-btn">-</button>
+                                            <input type="number" value="1" class="qty-input" readonly>
+                                            <button class="btn btn-outline-success qty-btn">+</button>
+                                        </div>
+                                    </td>
+                                    <td class="wsus__pro_icon">
+                                        <a href="#"><i class="fas fa-times"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cart Summary -->
+            <div class="col-xl-3">
+                <div class="wsus__cart_list_footer_button" id="sticky_sidebar">
+                    <h6>Total Cart</h6>
+                    <p>Total: <span class="sub_total">৳ 600</span></p>
+
+                    <a href="#" class="common_btn">Checkout</a>
+                    <a href="index.html" class="common_btn">
+                        <i class="fas fa-shopping-bag"></i> Continue Shopping
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

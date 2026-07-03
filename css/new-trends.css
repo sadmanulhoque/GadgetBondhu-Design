@@ -1,0 +1,281 @@
+/* ============================================================
+   NEW TRENDS SECTION — Slick-powered carousel
+   Self-contained: this file fully recreates the "pl-card" look
+   (badge, title, price, filled button) on top of the existing
+   .product-card markup, without depending on
+   css/product-list/product-card.css.
+   ============================================================ */
+
+.new-trends-section .product-section-header {
+  margin-bottom: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.new-trends-section .section-title {
+  font-size: clamp(28px, 3vw, 48px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+/* ==================== CUSTOM ARROWS ==================== */
+.new-trends-section .section-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.new-trends-section .carousel-arrow {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.new-trends-section .carousel-arrow-prev {
+  background: #ffffff;
+  border: 2px solid #d1d5db;
+  color: #6b7280;
+}
+
+.new-trends-section .carousel-arrow-next {
+  background: #111827;
+  color: #ffffff;
+  border: none;
+}
+
+.new-trends-section .carousel-arrow:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.new-trends-section .carousel-arrow i {
+  font-size: 15px;
+}
+
+.new-trends-section .carousel-arrow-prev:hover {
+  background: #f8fafc;
+  border-color: #9ca3af;
+  color: #374151;
+}
+
+/* ── Slick track spacing — reduced gap so cards aren't fat ── */
+.new-trends-slick .slick-list {
+  margin: 0 -6px;
+}
+
+.new-trends-slick .slick-slide {
+  padding: 0 6px;
+  height: auto;
+}
+
+.new-trends-slick .slick-slide > div {
+  display: flex;
+  height: 100%;
+}
+
+
+/* Equal-height fix: Slick doesn't stretch slides to match the
+   tallest one by default, so a card with a discount row (badge +
+   old price) ends up taller than a card without one. Forcing the
+   track into a stretched flex row makes every slide — and every
+   .product-card inside it — the same height. */
+.new-trends-slick .slick-track {
+  display: flex !important;
+  align-items: stretch !important;
+}
+
+.new-trends-slick .slick-slide {
+  height: auto !important;
+}
+
+/* Equal-height fix: Slick doesn't stretch slides to match the
+   tallest one by default, so a card with a discount row (badge +
+   old price) ends up taller than a card without one. Forcing the
+   track into a stretched flex row makes every slide — and every
+   .product-card inside it — the same height. */
+
+
+/* Hide default Slick controls — custom arrows above are used instead */
+.new-trends-slick .slick-prev,
+.new-trends-slick .slick-next,
+.new-trends-slick .slick-dots {
+  display: none !important;
+}
+
+/* ============================================================
+   CARD — recreated to match the pl-card design (image 1)
+   ============================================================ */
+.new-trends-slick .product-card {
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--color-border-light, #e5e7eb);
+  border-radius: 10px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s ease;
+}
+
+.new-trends-slick .product-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* ── Image ── */
+.new-trends-slick .product-card-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  padding-bottom: 0;
+  background: #f9fafb;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.new-trends-slick .product-card-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  transition: transform 0.4s ease;
+}
+
+.new-trends-slick .product-card:hover .product-card-image img {
+  transform: scale(1.05);
+}
+
+/* ── Discount badge ── */
+.new-trends-slick .product-card-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 2;
+  font-size: 11px;
+  font-weight: 700;
+  color: #ffffff;
+  background: #ef4444;
+  padding: 3px 8px;
+  border-radius: 99px;
+}
+
+/* ── Body ── */
+.new-trends-slick .product-card-body {
+  padding: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.new-trends-slick .product-card-title {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-dark, #111827);
+  margin-bottom: 6px;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -webkit-line-clamp: unset;
+  max-height: none;
+}
+
+.new-trends-slick .product-card-title:hover {
+  color: var(--color-dark, #111827);
+}
+
+/* ── Pricing ── */
+.new-trends-slick .product-card-pricing {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-height: auto;
+  margin-bottom: 0;
+}
+
+.new-trends-slick .product-card-price {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--color-dark, #111827);
+}
+
+.new-trends-slick .product-card-original-price {
+  font-size: 12px;
+  color: var(--color-gray-400, #9ca3af);
+  text-decoration: line-through;
+}
+
+.new-trends-slick .product-card-discount {
+  font-size: 10px;
+  font-weight: 600;
+  color: #10b981;
+  background: #d1fae5;
+  padding: 1px 6px;
+  border-radius: 99px;
+  white-space: nowrap;
+}
+
+/* ── Actions / button (filled orange, matches image 1) ── */
+.new-trends-slick .pl-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.new-trends-slick .btn-shop-now {
+  flex: 1;
+  text-align: center;
+  padding: 8px 0;
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: 99px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-dark, #111827);
+  background: #ffffff;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.new-trends-slick .btn-shop-now:hover {
+  filter: brightness(1.05);
+}
+.new-trends-slick .product-card:hover .btn-shop-now {
+  background: var(--color-primary, #f97316);
+  border-color: var(--color-primary, #f97316);
+  color: #ffffff;
+}
+
+/* ============================================================
+   Small screens
+   ============================================================ */
+@media (max-width: 480px) {
+  .new-trends-slick .product-card-price {
+    font-size: 15px;
+  }
+  .new-trends-slick .product-card-original-price {
+    font-size: 11px;
+  }
+  .new-trends-slick .product-card-discount {
+    font-size: 9px;
+    padding: 1px 5px;
+  }
+}

@@ -1,0 +1,260 @@
+/* ============================================================
+   HERO SECTION LAYOUT
+   ============================================================ */
+.hero-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+@media (min-width: 992px) {
+  .hero-section {
+    grid-template-columns: repeat(10, 1fr);
+    gap: 24px;
+    margin-top: 32px;
+  }
+}
+
+/* ============================================================
+   HERO SLIDER WRAPPER
+   ============================================================ */
+.hero-slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 992px) {
+  .hero-slider {
+    grid-column: 1 / 8;
+    grid-row: 1 / 3;
+  }
+}
+
+/* ============================================================
+   ASPECT-RATIO CONTAINER
+   ============================================================ */
+.slider-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 55.25%; /* mobile 16:9-ish aspect ratio */
+}
+
+@media (min-width: 992px) {
+  .slider-container {
+    padding-bottom: 0;
+    height: 100%;
+  }
+}
+
+/* ============================================================
+   SLICK INIT TARGET (.hero-slick)
+   ============================================================ */
+.hero-slick {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 992px) {
+  .hero-slick {
+    position: static;
+    height: 100%;
+  }
+}
+
+/* Make Slick's generated list + track fill the container */
+.hero-slick .slick-list,
+.hero-slick .slick-track {
+  height: 100%;
+}
+
+/* Each generated slide and its inner wrapper must fill too */
+.hero-slick .slick-slide,
+.hero-slick .slick-slide > div {
+  height: 100%;
+}
+
+/* ============================================================
+   SLIDE CONTENT
+   ============================================================ */
+.slider-slide {
+  height: 100%;
+}
+
+.slider-slide a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-slide figure {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.slider-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ============================================================
+   ARROW NAVIGATION BUTTONS
+   ============================================================ */
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-white);
+  border: none;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.18);
+  transition: background 0.2s ease, transform 0.2s ease;
+  color: var(--color-text);
+  font-size: 12px;
+}
+
+.hero-arrow:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.hero-arrow-prev {
+  left: 16px;
+}
+
+.hero-arrow-next {
+  right: 16px;
+}
+
+/* hide Slick's default arrow styles */
+.hero-slick .slick-prev,
+.hero-slick .slick-next {
+  display: none !important;
+}
+
+/* ============================================================
+   HERO DOTS - Smaller Clean Circle Style
+   ============================================================ */
+.hero-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  z-index: 10;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.hero-dots li {
+  width: 9px;
+  height: 9px;
+}
+
+.hero-dots li button {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+.hero-dots li.slick-active button {
+  background: #FF6B00;
+  transform: scale(1.3);
+  box-shadow: 0 2px 6px rgba(255, 107, 0, 0.5);
+}
+
+/* Responsive adjustment for dots */
+@media (min-width: 992px) {
+  .hero-dots {
+    bottom: 26px;
+  }
+  
+  .hero-dots li {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* ============================================================
+   HIDE ARROWS ON MOBILE
+   ============================================================ */
+@media (max-width: 991px) {
+  .hero-arrow {
+    display: none !important;
+  }
+}
+
+/* ============================================================
+   SIDE BANNER PANELS
+   ============================================================ */
+.hero-banner-side {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .hero-banner-side:nth-child(2) {
+    grid-column: 8 / 11;
+    grid-row: 1;
+  }
+
+  .hero-banner-side:nth-child(3) {
+    grid-column: 8 / 11;
+    grid-row: 2;
+  }
+}
+
+.hero-banner-side figure {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.hero-banner-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+@media (max-width: 991px) {
+  .hero-banner-side {
+    padding-bottom: 57.25%;
+  }
+
+  .hero-banner-side figure {
+    position: absolute;
+    inset: 0;
+  }
+}

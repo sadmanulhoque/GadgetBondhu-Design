@@ -1,0 +1,111 @@
+.wsus__cart_list table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 920px;
+}
+
+.wsus__cart_list table thead tr {
+    background: #F8F9FA;
+}
+
+.wsus__cart_list table tbody tr {
+    border-top: 1px solid var(--border);
+}
+
+.wsus__cart_list table tbody tr td,
+.wsus__cart_list table thead tr th {
+    padding: 16px 12px;
+    vertical-align: middle;
+    border-right: 1px solid var(--border);
+    white-space: nowrap;
+}
+
+.wsus__cart_list table tbody tr td:last-child,
+.wsus__cart_list table thead tr th:last-child {
+    border-right: none;
+}
+
+/* Column widths */
+.wsus__pro_img { width: 130px; min-width: 130px; }
+.wsus__pro_name { width: 320px; min-width: 320px; text-align: left !important; }
+.wsus__pro_status { width: 140px; min-width: 140px; }
+.wsus__pro_select { width: 170px; min-width: 170px; }
+.wsus__pro_icon { width: 100px; min-width: 100px; text-align: center; }
+
+.wsus__cart_list table thead tr th {
+    color: #292929;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.wsus__cart_list .wsus__pro_img img {
+    width: 100%;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.wsus__pro_name p {
+    margin: 0 0 6px 0;
+    font-weight: 600;
+    color: var(--dark);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.wsus__pro_name a {
+    color: var(--dark);
+}
+
+.wsus__pro_name a:hover {
+    color: var(--primary);
+}
+
+.wsus__pro_name span {
+    font-size: 14px;
+    color: #525252;
+}
+
+.wsus__pro_status p {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.qty-input {
+    width: 52px;
+    height: 40px;
+    border: 1px solid var(--border);
+    font-size: 16px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.qty-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.wsus__pro_icon a {
+    color: #525252;
+    font-size: 22px;
+}
+
+.clear-cart-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.clear-cart-btn:hover {
+    background: var(--primary-hover);
+}

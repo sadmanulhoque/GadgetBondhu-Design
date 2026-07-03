@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iPhone — TechGadget</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/product-list/layout.css">
+  <link rel="stylesheet" href="css/product-list/banner.css">
+  <link rel="stylesheet" href="css/product-list/sidebar.css">
+  <link rel="stylesheet" href="css/product-list/product-card.css">
+</head>
+<body>
+
+  <!-- Filter Overlay -->
+  <div class="filter-overlay"></div>
+
+  <!-- Filter Drawer (mobile) -->
+  <div class="filter-drawer">
+    <div class="filter-drawer-header">
+      <h2>Filters</h2>
+      <button class="filter-drawer-close"><i class="fas fa-times"></i></button>
+    </div>
+
+    <div class="filter-block">
+      <div class="filter-header">
+        <h3>Price Range</h3>
+        <i class="fas fa-chevron-up"></i>
+      </div>
+      <div class="filter-content">
+        <div class="price-range-inputs">
+          <input type="number" value="0" class="price-input">
+          <span class="price-separator">-</span>
+          <input type="number" value="275000" class="price-input">
+          <button class="price-submit"><i class="fas fa-play"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-block">
+      <div class="filter-header">
+        <h3>Category</h3>
+        <i class="fas fa-chevron-up"></i>
+      </div>
+      <div class="filter-content">
+        <div class="filter-links">
+          <a href="/category" class="filter-link-item">Laptop</a>
+          <a href="/category" class="filter-link-item">Desktop</a>
+          <a href="/category" class="filter-link-item">Tablet</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-block">
+      <div class="filter-header">
+        <h3>Brands</h3>
+        <i class="fas fa-chevron-up"></i>
+      </div>
+      <div class="filter-content">
+        <div class="filter-links">
+          <a href="/brands" class="filter-link-item">Apple</a>
+          <a href="/brands" class="filter-link-item">Samsung</a>
+          <a href="/brands" class="filter-link-item">Google</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="product-list-page">
+    <div class="container">
+
+      <!-- Banner -->
+      <div class="category-banner">
+        <img src="assets/images/prod-list-banner.png" alt="iPhones">
+      </div>
+
+      <!-- Breadcrumb -->
+      <div class="breadcrumb">
+        <a href="/">Home</a> &gt; <a href="/category/mobile-phone">Mobile Phone</a> &gt; <span>Iphone</span>
+      </div>
+
+      <!-- Mobile-only title + filter button row -->
+      <div class="mobile-title-row">
+        <h1 class="page-title-mobile">iPhone</h1>
+        <button class="filter-btn">
+          Filter <i class="fas fa-sliders-h"></i>
+        </button>
+      </div>
+
+      <!-- Layout Grid -->
+      <div class="product-list-layout">
+
+        <!-- Sidebar (desktop) -->
+        <aside class="product-sidebar">
+
+          <!-- Page Title (desktop — lives in left column) -->
+          <h1 class="page-title">iPhone</h1>
+
+          <h2 class="sidebar-title">Filters</h2>
+
+          <div class="filter-block">
+            <div class="filter-header">
+              <h3>Price Range</h3>
+              <i class="fas fa-chevron-up"></i>
+            </div>
+            <div class="filter-content">
+              <div class="price-range-inputs">
+                <input type="number" value="0" class="price-input">
+                <span class="price-separator">-</span>
+                <input type="number" value="275000" class="price-input">
+                <button class="price-submit"><i class="fas fa-play"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-block">
+            <div class="filter-header">
+              <h3>Category</h3>
+              <i class="fas fa-chevron-up"></i>
+            </div>
+            <div class="filter-content">
+              <div class="filter-links">
+                <a href="/category" class="filter-link-item">All Category</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-block">
+            <div class="filter-header">
+              <h3>Brands</h3>
+              <i class="fas fa-chevron-up"></i>
+            </div>
+            <div class="filter-content">
+              <div class="filter-links">
+                <a href="/brands" class="filter-link-item">All Brands</a>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main Product Area -->
+        <div class="product-list-main">
+          <div class="products-grid">
+
+            <!-- Product Card 1 -->
+            <div class="pl-card">
+              <div class="pl-card-img">
+                <img src="assets/images/product.png" alt="iPhone 17 Pro Max">
+              </div>
+              <div class="pl-card-info">
+                <h3 class="pl-card-title">iPhone 17 Pro Max</h3>
+                <div class="pl-card-price-row">
+                  <span class="pl-price">৳ 159,000</span>
+                </div>
+                <div class="pl-card-actions">
+                  <a href="/product-details.html" class="btn-shop-now">Add to cart</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="pl-card">
+              <div class="pl-card-img">
+                <span class="pl-discount-tag">5% OFF</span>
+                <img src="assets/images/product.png" alt="iPhone 17 Pro">
+              </div>
+              <div class="pl-card-info">
+                <h3 class="pl-card-title">iPhone 17 Pro</h3>
+                <div class="pl-card-price-row">
+                  <span class="pl-price">৳ 143,500</span>
+                  <span class="pl-old-price">৳ 147,000</span>
+                  <span class="pl-discount-badge">৳ 3,500 OFF</span>
+                </div>
+                <div class="pl-card-actions">
+                  <a href="/product-details.html" class="btn-shop-now primary">Add to cart</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="pl-card">
+              <div class="pl-card-img">
+                <img src="assets/images/product.png" alt="iPhone 17">
+              </div>
+              <div class="pl-card-info">
+                <h3 class="pl-card-title">iPhone 17</h3>
+                <div class="pl-card-price-row">
+                  <span class="pl-price">৳ 102,500</span>
+                </div>
+                <div class="pl-card-actions">
+                  <a href="/product-details.html" class="btn-shop-now">Add to cart</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div class="pl-card">
+              <div class="pl-card-img">
+                <img src="assets/images/product.png" alt="iPhone 16 Pro Max">
+              </div>
+              <div class="pl-card-info">
+                <h3 class="pl-card-title">iPhone 16 Pro Max</h3>
+                <div class="pl-card-price-row">
+                  <span class="pl-price">৳ 139,000</span>
+                </div>
+                <div class="pl-card-actions">
+                  <a href="/product-details.html" class="btn-shop-now">Add to cart</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 5 -->
+            <div class="pl-card">
+              <div class="pl-card-img">
+                <span class="pl-discount-tag">5% OFF</span>
+                <img src="assets/images/product.png" alt="iPhone 16 Pro">
+              </div>
+              <div class="pl-card-info">
+                <h3 class="pl-card-title">iPhone 16 Pro</h3>
+                <div class="pl-card-price-row">
+                  <span class="pl-price">৳ 124,000</span>
+                  <span class="pl-old-price">৳ 128,000</span>
+                  <span class="pl-discount-badge">৳ 4,000 OFF</span>
+                </div>
+                <div class="pl-card-actions">
+                  <a href="/product-details.html" class="btn-shop-now primary">Add to cart</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 6 -->
+            <div class="pl-card">
+              <div class="pl-card-img">
+                <img src="assets/images/product.png" alt="iPhone 16">
+              </div>
+              <div class="pl-card-info">
+                <h3 class="pl-card-title">iPhone 16</h3>
+                <div class="pl-card-price-row">
+                  <span class="pl-price">৳ 89,000</span>
+                </div>
+                <div class="pl-card-actions">
+                  <a href="/product-details.html" class="btn-shop-now">Add to cart</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/product-list/filter-drawer.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+.about-page {
+  padding: 20px 0 60px;
+  background-color: var(--color-white);
+}
+
+.about-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: 16px;
+}
+
+.about-section-sub {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  margin-top: -12px;
+  margin-bottom: 28px;
+  max-width: 520px;
+}
+
+@media (min-width: 768px) {
+  .about-section-sub {
+    font-size: 15px;
+  }
+}
+
+/* HERO */
+.about-hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+  padding: 12px 0 40px;
+}
+
+@media (min-width: 992px) {
+  .about-hero {
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    padding: 20px 0 56px;
+  }
+}
+
+.about-hero-title {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  color: var(--color-dark);
+  margin-bottom: 18px;
+}
+
+@media (min-width: 768px) {
+  .about-hero-title {
+    font-size: 42px;
+  }
+}
+
+.about-hero-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-text-light);
+  max-width: 480px;
+  margin-bottom: 28px;
+}
+
+.about-hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.about-hero-cta .btn i {
+  font-size: 12px;
+}
+
+.about-hero-panel {
+  position: relative;
+  background: var(--color-gray-50);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+}
+
+.hero-panel-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--color-white);
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  width: fit-content;
+}
+
+.hero-panel-badge i {
+  color: var(--color-primary);
+  font-size: 20px;
+}
+
+.hero-panel-badge strong {
+  display: block;
+  font-size: 17px;
+  color: var(--color-dark);
+  line-height: 1.2;
+}
+
+.hero-panel-badge span {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.hero-panel-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero-panel-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.hero-panel-list i {
+  color: var(--color-primary);
+  font-size: 16px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}

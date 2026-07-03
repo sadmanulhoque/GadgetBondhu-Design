@@ -1,0 +1,24 @@
+.mid-banner {
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.mid-banner img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  transition: transform 0.4s ease;
+}
+
+.mid-banner:hover img {
+  transform: scale(1.02);
+}
+
+.mid-banner a {
+  display: block;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}

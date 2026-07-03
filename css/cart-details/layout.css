@@ -1,0 +1,30 @@
+:root {
+    --primary: #F27F20;
+    --primary-hover: #E36313;
+    --dark: #292929;
+    --border: #E5E5E5;
+    --radius: 12px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #FAFAFA;
+    color: #292929;
+}
+
+#wsus__cart_view {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.wsus__cart_list {
+    background: #fff;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 12px 16px -4px rgba(0,0,0,0.08);
+}
+
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Tracking — TechGadget</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Split into one CSS file per section for readability -->
+<link rel="stylesheet" href="css/order-tracking/base.css">
+<link rel="stylesheet" href="css/order-tracking/breadcrumb.css">
+<link rel="stylesheet" href="css/order-tracking/form.css">
+<link rel="stylesheet" href="css/order-tracking/summary.css">
+<link rel="stylesheet" href="css/order-tracking/progress.css">
+<link rel="stylesheet" href="css/order-tracking/states.css">
+<link rel="stylesheet" href="css/order-tracking/responsive.css">
+</head>
+<body>
+
+<main class="track-page">
+  <div class="container">
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <a href="#">Home</a> &gt; <span>Order Tracking</span>
+    </div>
+
+    <!-- Track form -->
+    <div class="track-form-wrap">
+      <form class="track-form" action="#" method="GET">
+        <h1>Track Your Order</h1>
+        <p>Enter your order ID to see the latest status</p>
+
+        <div class="track-field">
+          <label for="order_id">Order ID *</label>
+          <input type="text" id="order_id" name="order_id" placeholder="e.g. TG-00123" required>
+        </div>
+
+        <button type="submit" class="track-submit">Track Order</button>
+      </form>
+    </div>
+
+    <!-- Order summary (example data) -->
+    <div class="track-summary">
+      <div class="track-summary-card">
+        <h5>Order Date</h5>
+        <p>02 Jul 2026</p>
+      </div>
+      <div class="track-summary-card">
+        <h5>Shipping To</h5>
+        <p>Rafiul Islam</p>
+      </div>
+      <div class="track-summary-card">
+        <h5>Order Status</h5>
+        <p><span class="badge badge-processing">Processing</span></p>
+      </div>
+      <div class="track-summary-card">
+        <h5>Payment Type</h5>
+        <p><span class="badge badge-paid">Paid</span></p>
+      </div>
+    </div>
+
+    <!-- Progress tracker (example: step 2 of 4 — "Processing" active) -->
+    <div class="track-progress">
+      <div class="progress-fill" style="width:33.33%"></div>
+
+      <div class="track-step completed">
+        <div class="step-circle"><i class="fas fa-check"></i></div>
+        <div class="step-label">Pending</div>
+      </div>
+
+      <div class="track-step completed active">
+        <div class="step-circle"><i class="fas fa-check"></i></div>
+        <div class="step-label">Processing</div>
+      </div>
+
+      <div class="track-step">
+        <div class="step-circle"><i class="fas fa-truck"></i></div>
+        <div class="step-label">On The Way</div>
+      </div>
+
+      <div class="track-step">
+        <div class="step-circle"><i class="fas fa-box"></i></div>
+        <div class="step-label">Delivered</div>
+      </div>
+    </div>
+
+    <div class="track-back">
+      <a href="#"><i class="fas fa-chevron-left"></i> Back to Home</a>
+    </div>
+
+    <!-- ============================================================
+         ALTERNATE STATES — copy whichever block applies, delete the rest
+         ============================================================ -->
+
+    <!-- Cancelled order: replace .track-progress block with this -->
+    <!--
+    <div class="track-cancelled">
+      <h5><i class="fas fa-times-circle"></i> This order has been cancelled.</h5>
+    </div>
+    -->
+
+    <!-- Order not found: shown instead of the summary/progress sections -->
+    <!--
+    <div class="track-not-found">
+      <strong>Order not found</strong>
+      <p>Please check the Order ID and try again.</p>
+    </div>
+    <div class="track-back">
+      <a href="#"><i class="fas fa-chevron-left"></i> Back to Home</a>
+    </div>
+    -->
+
+  </div>
+</main>
+
+</body>
+</html>

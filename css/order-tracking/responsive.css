@@ -1,0 +1,75 @@
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 767px) {
+  .track-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .track-form {
+    padding: 32px 20px;
+  }
+
+  /* Stepper becomes a vertical list, centered as a block on the page
+     instead of hugging the left edge of the screen */
+  .track-progress {
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto 8px;
+    padding: 0;
+    max-width: 260px;
+  }
+
+  .track-progress::before {
+    top: 0;
+    bottom: 0;
+    left: 26px;
+    width: 4px;
+    height: auto;
+  }
+
+  .track-progress .progress-fill {
+    top: 0;
+    left: 26px;
+    width: 4px !important;
+    /* set inline height per order instead of width */
+  }
+
+  .track-step {
+    display: flex;
+    align-items: center;
+    flex: none;
+    width: 100%;
+    margin-bottom: 22px;
+    text-align: left;
+  }
+
+  .track-step .step-circle {
+    margin: 0 20px 0 0;
+    flex-shrink: 0;
+  }
+
+  .track-step:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .track-summary {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .track-summary-card {
+    padding: 14px 12px;
+  }
+
+  .track-summary-card h5 {
+    font-size: 10px;
+  }
+
+  .track-summary-card p {
+    font-size: 13px;
+  }
+}

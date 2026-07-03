@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xiaomi Pad 7 — TechGadget</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Slick -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+
+  <!-- Shared base (your existing base.css) -->
+  <link rel="stylesheet" href="css/base.css">
+
+  <!-- Product detail section CSS -->
+  <link rel="stylesheet" href="css/product-details/layout.css">
+  <link rel="stylesheet" href="css/product-details/gallery.css">
+  <link rel="stylesheet" href="css/product-details/product-info.css">
+  <link rel="stylesheet" href="css/product-details/variants.css">
+  <link rel="stylesheet" href="css/product-details/actions.css">
+</head>
+<body>
+
+  <!-- ==================== PRODUCT DETAIL ==================== -->
+  <main>
+    <div class="container">
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/category/tablet">Tablet &amp; Accessories</a></li>
+          <li><a href="/category/tablet/xiaomi">Xiaomi</a></li>
+          <li class="active">Xiaomi Pad 7</li>
+        </ol>
+      </nav>
+
+      <section class="product-detail-section">
+        <div class="product-detail-grid">
+
+          <!-- ============================================================
+               LEFT — Gallery (Slick slider)
+          ============================================================ -->
+          <div class="product-gallery">
+
+            <!-- Main image slider -->
+            <div class="gallery-main-slider">
+              <div><img src="assets/images/prod-details0.png" alt="Xiaomi Pad 7 — View 1"></div>
+              <div><img src="assets/images/prod-details1.png" alt="Xiaomi Pad 7 — View 2"></div>
+              <div><img src="assets/images/prod-details2.jpeg" alt="Xiaomi Pad 7 — View 3"></div>
+            </div>
+
+            <!-- Thumbnail nav slider -->
+            <div class="gallery-thumbs-slider">
+              <div class="thumb-item"><img src="assets/images/prod-details0.png" alt="Thumbnail 1"></div>
+              <div class="thumb-item"><img src="assets/images/prod-details1.png" alt="Thumbnail 2"></div>
+              <div class="thumb-item"><img src="assets/images/prod-details2.jpeg" alt="Thumbnail 3"></div>
+            </div>
+
+          </div><!-- /.product-gallery -->
+
+
+          <!-- ============================================================
+               RIGHT — Product info
+          ============================================================ -->
+          <div class="product-info">
+
+            <!-- Brand & Title Group -->
+            <div class="title-group">
+              <div class="product-brand">
+                <img src="assets/images/brand.png" alt="Xiaomi" class="brand-image">
+              </div>
+              <h1 class="product-title">Xiaomi Pad 7</h1>
+            </div>
+
+            <!-- Price + meta -->
+            <div>
+              <div class="product-price-row">
+                <span class="price-current">৳38,499</span>
+                <span class="price-cash-label">(Cash Price)</span>
+                <span class="price-original">৳42,000</span>
+              </div>
+              <div class="product-meta-row">
+                <div class="meta-item">
+                  <span class="meta-label">Availability:</span>
+                  <span class="stock-badge">In Stock</span>
+                </div>
+                <div class="meta-item">
+                  <span class="meta-label">Code:</span>
+                  <span class="meta-value">AGL29049</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="pd-divider"></div>
+
+            <!-- Color + Storage (side by side) -->
+            <div class="variant-row">
+              <div class="variant-box">
+                <div class="variant-group">
+                  <span class="variant-label">Color:</span>
+                  <div class="variant-options">
+                    <button class="color-option active">
+                      <span class="color-dot" style="background:#111;"></span> Black
+                    </button>
+                    <button class="color-option">
+                      <span class="color-dot" style="background:#b0c4de;"></span> Blue
+                    </button>
+                    <button class="color-option">
+                      <span class="color-dot" style="background:#8fbc8f;"></span> Green
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="variant-box">
+                <div class="variant-group">
+                  <span class="variant-label">Storage:</span>
+                  <div class="variant-options">
+                    <button class="storage-option">8/128GB</button>
+                    <button class="storage-option active">8/256GB</button>
+                    <button class="storage-option">12/256GB</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Type (full-width box) -->
+            <div class="variant-box">
+              <div class="variant-group">
+                <span class="variant-label">Type:</span>
+                <div class="variant-options">
+                  <button class="type-option">With Book Cover</button>
+                  <button class="type-option active">Without Book Cover</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quantity -->
+            <div class="quantity-row">
+              <span class="qty-label">Select Quantity:</span>
+              <div class="qty-control">
+                <button class="qty-btn" data-action="decrease" aria-label="Decrease quantity">−</button>
+                <input class="qty-value" id="qty-input" type="number" value="1" min="1" max="99" readonly>
+                <button class="qty-btn" data-action="increase" aria-label="Increase quantity">+</button>
+              </div>
+            </div>
+
+            <!-- CTA buttons -->
+            <div class="action-row-container">
+
+              <div class="action-row">
+                <button class="btn-shop-now">
+                  <i class="fas fa-shopping-cart"></i> Add to Cart
+                </button>
+                <button class="btn-add-cart">
+                  <i class="fas fa-exchange-alt"></i> Compare
+                </button>
+              </div>
+            </div>
+
+            <!-- EMI + WhatsApp -->
+            <div class="info-pills">
+              <div class="info-pill emi">
+                <i class="fas fa-percent"></i>
+                <span>EMI Available <a href="#" class="pill-link">View Plans</a></span>
+              </div>
+              <a href="https://wa.me/" class="info-pill whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                <span><strong>Whatsapp</strong></span>
+              </a>
+            </div>
+
+            <!-- Delivery -->
+            <div class="delivery-row">
+              <i class="fas fa-truck"></i>
+              <span>Delivery Timescale: <strong>3-5 Days</strong></span>
+            </div>
+
+          </div><!-- /.product-info -->
+        </div><!-- /.product-detail-grid -->
+
+
+        <!-- ============================================================
+             DESCRIPTION
+        ============================================================ -->
+        <div class="product-description">
+          <div class="product-description-content">
+            <h3>Description</h3>
+            <p>The Xiaomi Pad 7 features an 11.2-inch IPS LCD display with a 144Hz refresh rate and 2880×1800 resolution, powered by the Snapdragon 7s Gen 3.</p>
+            <p>With an 8850mAh battery supporting 45W Turbo Charging and HyperOS on top of Android 14, it delivers a smooth, all-day experience for work and entertainment alike.</p>
+          </div>
+        </div>
+
+      </section>
+    </div><!-- /.container -->
+  </main>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- Slick -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+  <!-- Section JS -->
+  <script src="js/product-details/gallery.js"></script>
+  <script src="js/product-details/variants.js"></script>
+  <script src="js/product-details/actions.js"></script>
+</body>
+</html>

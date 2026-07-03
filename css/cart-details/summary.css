@@ -1,0 +1,27 @@
+/* Cart Summary */
+.wsus__cart_list_footer_button {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 24px;
+    box-shadow: 0 12px 16px -4px rgba(0,0,0,0.08);
+}
+
+.wsus__cart_list_footer_button h6 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.wsus__cart_list_footer_button p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.wsus__cart_list_footer_button .total {
+    border-top: 2px solid var(--border);
+    padding-top: 16px;
+    font-size: 19px;
+    font-weight: 700;
+}

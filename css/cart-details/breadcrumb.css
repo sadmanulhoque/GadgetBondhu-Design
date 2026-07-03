@@ -1,0 +1,19 @@
+/* Breadcrumb */
+.cart-breadcrumb {
+    font-size: 14px;
+    color: #525252;
+    margin-bottom: 24px;
+}
+
+.cart-breadcrumb a {
+    color: #525252;
+    text-decoration: none;
+}
+
+.cart-breadcrumb a:hover {
+    color: var(--primary);
+}
+
+.cart-breadcrumb span {
+    color: var(--dark);
+}

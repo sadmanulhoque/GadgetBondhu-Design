@@ -1,0 +1,20 @@
+/* css/product-list/banner.css */
+
+.category-banner {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.category-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .category-banner {
+    border-radius: var(--radius-lg);
+  }
+}
