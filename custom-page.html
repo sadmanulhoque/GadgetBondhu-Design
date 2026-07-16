@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms & Conditions — TechGadget</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Shared base (your existing base.css) -->
+  <link rel="stylesheet" href="css/base.css">
+
+  <!-- Custom page CSS -->
+  <link rel="stylesheet" href="css/custom-page/custom-page.css">
+
+  <style>
+    /* ============================================================
+   CUSTOM PAGE — custom-page.css
+   ============================================================ */
+
+.custom-page {
+  padding: 20px 0 60px;
+  background-color: var(--color-white);
+}
+
+/* ── Breadcrumb (same as product-list / product-details) ── */
+.breadcrumb {
+  padding: 16px 0 0;
+}
+
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 6px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--color-gray-500);
+}
+
+.breadcrumb li a {
+  color: var(--color-gray-500);
+  transition: color 0.2s;
+}
+
+.breadcrumb li a:hover {
+  color: var(--color-primary);
+}
+
+.breadcrumb li.active {
+  color: var(--color-dark);
+  font-weight: 500;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  content: '/';
+  color: var(--color-gray-300);
+}
+
+/* ── Page title — identical treatment to product-list .page-title ── */
+.custom-page .page-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--color-dark);
+  margin: 24px 0;
+}
+
+@media (max-width: 767px) {
+  .custom-page .page-title {
+    font-size: 24px;
+    margin: 16px 0 20px;
+  }
+}
+
+/* ── Content card ── */
+.custom-page-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+}
+
+@media (max-width: 767px) {
+  .custom-page-card {
+    padding: 20px;
+    border-radius: var(--radius-md);
+  }
+}
+
+/* ============================================================
+   RICH TEXT CONTENT — styled for CKEditor output
+   ============================================================ */
+
+.custom-page-content {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--color-text, var(--color-dark));
+  max-width: 100%;
+}
+
+.custom-page-content h1,
+.custom-page-content h2,
+.custom-page-content h3,
+.custom-page-content h4 {
+  color: var(--color-dark);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.custom-page-content h2 {
+  font-size: 22px;
+  margin: 36px 0 16px;
+}
+
+.custom-page-content h2:first-child {
+  margin-top: 0;
+}
+
+.custom-page-content h3 {
+  font-size: 17px;
+  margin: 26px 0 12px;
+}
+
+.custom-page-content h4 {
+  font-size: 15px;
+  margin: 20px 0 10px;
+}
+
+.custom-page-content p {
+  margin-bottom: 16px;
+  color: var(--color-text-light, var(--color-gray-500));
+}
+
+.custom-page-content ul,
+.custom-page-content ol {
+  margin: 0 0 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--color-text-light, var(--color-gray-500));
+}
+
+.custom-page-content ul {
+  list-style: disc;
+}
+
+.custom-page-content ol {
+  list-style: decimal;
+}
+
+.custom-page-content li {
+  line-height: 1.7;
+}
+
+/* CKEditor to-do list */
+.custom-page-content .todo-list {
+  list-style: none;
+  margin-left: 0;
+}
+
+.custom-page-content .todo-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.custom-page-content a {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.custom-page-content strong,
+.custom-page-content b {
+  color: var(--color-dark);
+  font-weight: 700;
+}
+
+/* ── Blockquote (CKEditor default) ── */
+.custom-page-content blockquote {
+  border-left: 3px solid var(--color-primary);
+  background: var(--color-primary-light);
+  padding: 14px 20px;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin: 20px 0;
+  color: var(--color-dark);
+}
+
+.custom-page-content blockquote p {
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+/* ── Table (CKEditor wraps tables in figure.table) ── */
+.custom-page-content .table,
+.custom-page-content table {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.custom-page-content table {
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.custom-page-content th,
+.custom-page-content td {
+  border: 1px solid var(--color-border);
+  padding: 10px 14px;
+  text-align: left;
+}
+
+.custom-page-content th {
+  background: var(--color-gray-50);
+  font-weight: 700;
+  color: var(--color-dark);
+}
+
+/* ── Media (CKEditor wraps images in figure.image) ── */
+.custom-page-content .image,
+.custom-page-content figure {
+  margin: 20px 0;
+}
+
+.custom-page-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  display: block;
+}
+
+.custom-page-content figcaption {
+  font-size: 12px;
+  color: var(--color-gray-400);
+  text-align: center;
+  margin-top: 8px;
+}
+
+.custom-page-content hr {
+  border: none;
+  border-top: 1px solid var(--color-border-light);
+  margin: 28px 0;
+}
+
+.custom-page-content code {
+  background: var(--color-gray-50);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 767px) {
+  .custom-page-content {
+    font-size: 14px;
+  }
+
+  .custom-page-content h2 {
+    font-size: 19px;
+    margin: 28px 0 12px;
+  }
+
+  .custom-page-content h3 {
+    font-size: 16px;
+  }
+
+  .custom-page-content table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- ==================== CUSTOM PAGE ==================== -->
+  <main class="custom-page">
+    <div class="container">
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li class="active">Terms & Conditions</li>
+        </ol>
+      </nav>
+
+      <!-- Page title — same treatment as product-list page-title -->
+      <h1 class="page-title">Terms & Conditions</h1>
+
+      <!-- Content card -->
+      <div class="custom-page-card">
+        <div class="custom-page-content ck-content">
+
+          <h2>1. Introduction</h2>
+          <p>Welcome to TechGadget. These Terms & Conditions outline the rules and regulations for the use of our website and services. By accessing this website, we assume you accept these terms in full.</p>
+          <p>Do not continue to use TechGadget if you do not agree to all of the terms stated on this page.</p>
+
+          <h2>2. Orders & Payment</h2>
+          <p>All orders placed through our website are subject to availability and confirmation of the order price. We reserve the right to refuse any order placed with us.</p>
+
+          <h3>2.1 Pricing</h3>
+          <p>All prices listed are in Bangladeshi Taka (৳) and are inclusive of applicable taxes unless otherwise stated. Prices are subject to change without prior notice.</p>
+
+          <h3>2.2 Payment Methods</h3>
+          <ul>
+            <li>Cash on Delivery (select areas only)</li>
+            <li>Credit / Debit Card</li>
+            <li>Mobile Financial Services (bKash, Nagad, Rocket)</li>
+            <li>Bank Transfer</li>
+          </ul>
+
+          <h2>3. Shipping & Delivery</h2>
+          <p>We aim to dispatch all orders within 24–48 hours of confirmation. Delivery timelines vary based on your location, typically ranging from 1–5 business days.</p>
+
+          <blockquote>
+            <p>Orders placed after 6:00 PM will be processed the following business day.</p>
+          </blockquote>
+
+          <h2>4. Returns & Warranty</h2>
+          <p>Products may be returned within 7 days of delivery if they are unused, in original packaging, and accompanied by proof of purchase.</p>
+
+          <figure class="table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Product Category</th>
+                  <th>Warranty Period</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mobile Phones & Tablets</td>
+                  <td>12 Months</td>
+                </tr>
+                <tr>
+                  <td>Accessories</td>
+                  <td>3 Months</td>
+                </tr>
+                <tr>
+                  <td>Laptops</td>
+                  <td>24 Months</td>
+                </tr>
+              </tbody>
+            </table>
+          </figure>
+
+          <h2>5. Limitation of Liability</h2>
+          <p>TechGadget will not be held liable for any indirect, incidental, or consequential damages arising from the use of our products or services.</p>
+
+          <h2>6. Governing Law</h2>
+          <p>These terms are governed by and construed in accordance with the laws of Bangladesh, and any disputes will be subject to the exclusive jurisdiction of the courts of Dhaka.</p>
+
+          <h2>7. Contact Us</h2>
+          <p>If you have any questions about these Terms & Conditions, please reach out via our <a href="/contact-us">contact page</a> or call our support line.</p>
+
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>
